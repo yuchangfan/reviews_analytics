@@ -17,3 +17,11 @@ for review in data:
 	sum_len += len(review) # sum_len = sum_len + len(review)
 
 print('每則留言平均有', sum_len / len(data), '個字')
+
+new = []
+for review in data:
+	if len(review) < 100:
+		new.append(review)
+
+print('一共有', len(new), '筆留言長度小於100個字')
+print(new[0])
