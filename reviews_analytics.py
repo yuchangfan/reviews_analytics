@@ -25,9 +25,14 @@ for review in data:
 print('一共有', len(new), '筆留言長度小於100個字')
 
 # 篩選留言裡有提到good
-
+# 下面可以簡寫成：
+# good = [review for review in data if 'good' in review]
 good = []
 for review in data:
 	if 'good' in review:
 		good.append(review)
 print('一共有', len(good), '筆留言提到good')
+
+# 'bad' in review 進清單
+bad = ['bad' in review for review in data]
+print(bad)
